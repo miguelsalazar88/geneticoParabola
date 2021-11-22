@@ -8,7 +8,7 @@ public class Numero implements Comparable<Numero> {
     private final int calificacion; // y =
     private Random rnd = new Random();
 
-    public Numero(String especimen) {
+    public Numero(String especimen) { //constructor
         this.especimen = especimen;
         this.calificacion = getCal(getDecimal(this.especimen));
     }
@@ -32,7 +32,7 @@ public class Numero implements Comparable<Numero> {
             }
         }
         if(especimen.charAt(especimen.length()-1)=='0'){
-            return decimal * -1;
+                return decimal * -1;
         }
         else{
             return decimal;
@@ -48,7 +48,7 @@ public class Numero implements Comparable<Numero> {
             return -1;
         }
         else{
-            return (int) (-2*(Math.pow(x,2))+(5*x) +2); // -2x^2 + 5x +2
+            return (int) (-2*(Math.pow(x,2))+(5*x) +2); // y = -2x^2 + 5x +2 = Calificacion
         }
     }
     public String crearhijo(Numero especimen2){

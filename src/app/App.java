@@ -47,15 +47,12 @@ public class App {
 
     public static ArrayList<Numero> reemplazar(ArrayList<Numero> poblacion, int veces){
 
-        ArrayList<Numero> poblacionNueva = new ArrayList<>();
-
         for (int i = 0; i < veces; i++) {
 
             for (int j = 0; j < 10; j++) {
                 Numero n = new Numero(poblacion.get(j).crearhijo(poblacion.get(j+1)));
                 if(n.getCalificacion() > poblacion.get(j).getCalificacion()
                     && n.getCalificacion() > poblacion.get(j+1).getCalificacion()){
-                    System.out.println("Eureka");
                     poblacion.remove(j);
                     poblacion.add(n);
                 }
